@@ -3,9 +3,6 @@ var router = express.Router();
 var mongoose = require('../db/mongoose');
 var soldadosModel = require('../model/strompperModel');
 
-var passport = require('passport')
-  , FacebookStrategy = require('passport-facebook').Strategy;
-
 
 router.get('/', function(req, res){	
 	soldadosModel.find(function (err, soldados) {

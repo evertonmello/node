@@ -17,17 +17,9 @@ app.use(methodOverride('X-Method-Override'));
 app.use(methodOverride('_method'));
 app.use(methodOverride('Access-Control-Allow-Origin'));
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', require('./routes'));
-
-mongoose.connect('mongodb://localhost/test');
-
-var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('we re connected');
-});
-
 
 module.exports = app;
