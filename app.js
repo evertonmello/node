@@ -1,12 +1,12 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var debug = require('debug')('appjs');
-var methodOverride = require('method-override');
-var Soldado = require('./model/strompperModel');
-var passport = require('passport')
-  , FacebookStrategy = require('passport-facebook').Strategy;
+	var express = require('express'),
+	app = express(),
+	mongoose = require('mongoose'),
+	bodyParser = require('body-parser'),
+	debug = require('debug')('appjs'),
+	methodOverride = require('method-override'),
+	Soldado = require('./model/strompperModel'),
+	passport = require('passport');
+    
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 

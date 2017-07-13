@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('../db/mongoose');
-var soldadosModel = require('../model/strompperModel');
-var passport = require('passport');
-var BasicStrategy = require('passport-http').BasicStrategy;
-var auth = require('../config/auth.js');
+var express = require('express'),
+	router = express.Router(),
+	mongoose = require('../db/mongoose'),
+	soldadosModel = require('../model/strompperModel'),
+	passport = require('passport'),
+	BasicStrategy = require('passport-http').BasicStrategy,	
+	auth = require('../helpers/auth.js');
 
 //basic authentication configuration...
 passport.use(new BasicStrategy(function (username, password, done){
@@ -15,7 +15,6 @@ passport.use(new BasicStrategy(function (username, password, done){
 	}
   })
 );
-
 
 router.get('/',auth.middleware, function(req, res){	
 	soldadosModel.find(function (err, soldados) {

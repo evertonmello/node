@@ -7,8 +7,7 @@ var express = require('express'),
 router.use('/listaTelefonica', require('./listaTelefonica'));
 router.use('/stromppers', require('./stromppers'));
 router.use('/auth', require('./auth'));
-
-router.get('/', function(req, res){res.send("!")});
+router.use('/users', require('./user'));
 
 router.post('/login', function(req, res, next){
 	var username = req.body.username;	
