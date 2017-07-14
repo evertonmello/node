@@ -2,7 +2,7 @@ var express = require('express'),
     router = express.Router(),
 	jwt = require('jwt-simple'),
 	moment = require('moment'),
-	config = require('config');
+	config = require('../config/config.json');
 
 router.use('/listaTelefonica', require('./listaTelefonica'));
 router.use('/stromppers', require('./stromppers'));
