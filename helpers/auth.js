@@ -4,7 +4,8 @@ var jwt = require('jwt-simple'),
 	moment = require('moment'),
 	FacebookStrategy = require('passport-facebook').Strategy,
 	User = require('../model/userModel'),
-	config = require('config');
+
+	config = require('../config/config.json');
 
 	//facebook authentication config...
 	passport.serializeUser(function(user, done) {
@@ -39,7 +40,7 @@ module.exports = {
 			return next(err);
 		}
 		try{
-			var decoded = jwt.decode(token, config.get('jwtTokenSecret'));
+			var decoded = jwt.decode(token, config.jwt.jwtTokenSecret);
 			var isExpired = moment(decoded.exp).isBefore(new Date());
 
 			if(isExpired){
