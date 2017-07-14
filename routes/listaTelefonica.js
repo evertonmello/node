@@ -14,6 +14,10 @@ router.get('/', function(req, res){
 	 res.send(JSON.stringify(arr));
 });
 
+router.get('/html', function(req, res){	 
+	 res.sendFile('/home/engdb/projetos/node/views/index.html');
+});
+
 router.get('/:id', function(req, res){
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept")

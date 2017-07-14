@@ -54,5 +54,5 @@ module.exports = {
 			return next(err);
 		}
 	} 
-}
+};
 
