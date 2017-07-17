@@ -8,7 +8,7 @@
 	passport = require('passport');
     
 var x;
-fuction(){
+fuction(teste){
 
 	return a;
 }
