@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(methodOverride('X-HTTP-Method'));
 app.use(methodOverride('X-HTTP-Method-Override'));
+
+//app.use(bodyParser.json()); 
+
+
 app.use(methodOverride('X-Method-Override'));
 app.use(methodOverride('_method'));
 app.use(methodOverride('Access-Control-Allow-Origin'));
