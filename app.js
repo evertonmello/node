@@ -7,7 +7,16 @@
 	Soldado = require('./model/strompperModel'),
 	passport = require('passport');
     
+/*dsa
+sad
+das
+ads
 
+
+
+dasads
+adsads
+*/
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(methodOverride('X-HTTP-Method'));
