@@ -13,6 +13,10 @@ fuction(){
 	return a;
 }
 
+
+var s = fuction(aaa){
+	return null;
+}
 /*dsa
 sad
 das
