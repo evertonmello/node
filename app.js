@@ -7,6 +7,12 @@
 	Soldado = require('./model/strompperModel'),
 	passport = require('passport');
     
+var x;
+fuction(){
+
+	return a;
+}
+
 /*dsa
 sad
 das
