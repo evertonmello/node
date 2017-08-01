@@ -9,7 +9,7 @@ router.use('/stromppers', require('./stromppers'));
 router.use('/auth', require('./auth'));
 router.use('/users', require('./user'));
 
-router.post('/login', function(req, res, next){
+router.post('/login', function(req, res, next){	
 	var username = req.body.username;	
 	var password = req.body.password;
 
@@ -18,7 +18,7 @@ router.post('/login', function(req, res, next){
 		var token = jwt.encode({
 			user: username,
 			exp: expires
-		}, config.get('jwtTokenSecret'));
+		}, config.jwt.jwtTokenSecret);
 
 		res.json({
 			token: token

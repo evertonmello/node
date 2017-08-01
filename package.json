@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "jshint *",
     "test": "mocha",
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "nodemon": "nodemon ./bin/www"
   },
   "author": "everton mello",

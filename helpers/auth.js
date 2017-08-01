@@ -2,7 +2,7 @@ var jwt = require('jwt-simple'),
 	passport = require('passport'),   
 	BasicStrategy = require('passport-http').BasicStrategy,
 	moment = require('moment'),
-	//FacebookStrategy = require('passport-facebook').Strategy,
+	FacebookStrategy = require('passport-facebook').Strategy,
 	User = require('../model/userModel'),
 
 	config = require('../config/config.json');
@@ -15,7 +15,7 @@ var jwt = require('jwt-simple'),
 	passport.deserializeUser(function(user, done) {
 	  done(null, user);
 	});
-/*
+
 	passport.use(new FacebookStrategy({
 	    clientID: "1934126740191387",
 	    clientSecret: "233462cab40af020b418dead853698b9",
@@ -28,7 +28,7 @@ var jwt = require('jwt-simple'),
 	        return done(null, {});
 	      });
 	  }
-));*/
+));
 
 module.exports = {
 	//middleare auth configuration...

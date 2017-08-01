@@ -10,7 +10,9 @@ var express = require('express'),
 
 
 router.get('/', function(req, res){
-	 res.setHeader("Access-Control-Allow-Origin", "*");	 	 
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
+	res.setHeader("Access-Control-Allow-Origin", "*");	 	 
 	 res.send(JSON.stringify(arr));
 });
 
