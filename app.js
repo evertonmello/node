@@ -1,4 +1,4 @@
-/*	var express = require('express'),
+	var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
 	debug = require('debug')('appjs'),
@@ -21,9 +21,9 @@ app.use('/', require('./routes'));
 
 
 module.exports = app;
-*/
 
-var x = {
+
+/*var x = {
 	value :0,
 	add : function(argument) {
 		return this.value++;
@@ -95,7 +95,7 @@ f(!a || !b || !c || !d){
 	console.log("!!!");
 }
 */
-
+/*
 var letra = {
 	x: "x",
 	v:"v"
@@ -106,9 +106,17 @@ var b = {
 };
 
 Object.setPrototypeOf(b,letra);
+*/
+//console.log(b.x + " " + b.v);
 
-console.log(b.x + " " + b.v);
+/*var criarPai = function(nome, idade){
+	this.nome = nome,
+	this.idade = idade	
+	
+}
 
-//console.log(str.match(regExp));
+
+console.log(new criarPai("everton", 23));*/
 
 
+//console.log(str.match(regExp));*/
