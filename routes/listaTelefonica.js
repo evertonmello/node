@@ -9,10 +9,7 @@ var express = require('express'),
 			{"id":5,"nome": "telefonica", "telefone" : "321313", "color": "blue","data": d}];
 
 
-router.get('/', function(req, res){
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
-	res.setHeader("Access-Control-Allow-Origin", "*");	 	 
+router.get('/', function(req, res){ 	 
 	 res.send(JSON.stringify(arr));
 });
 
@@ -21,8 +18,6 @@ router.get('/html', function(req, res){
 });
 
 router.get('/:id', function(req, res){
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept")
 	var result = arr.filter(function( obj ) {
 	  return obj.id == req.params.id ;
 	});	
@@ -30,8 +25,6 @@ router.get('/:id', function(req, res){
 });
 
 router.post('/post', function(req, res){
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
 	add(JSON.parse(Object.keys(req.body)[0]));	
 	res.send('sucess');
 });
